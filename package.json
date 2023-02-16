@@ -6,9 +6,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "@types/mongoose": "^5.11.97",
     "axios": "^1.2.6",
     "mobx": "^6.7.0",
     "mobx-react-lite": "^3.4.0",
+    "mongoose": "^6.9.1",
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",
