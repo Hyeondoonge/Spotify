@@ -1,4 +1,4 @@
-import { Model } from 'mongoose'
+import { model } from 'mongoose'
 import genres from 'schemas/genres'
 
-export default new Model('spotify', genres)
+export default model('genres', genres)

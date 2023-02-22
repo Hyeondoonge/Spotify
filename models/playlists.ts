@@ -1,4 +1,4 @@
-import { Model } from 'mongoose'
+import { model } from 'mongoose'
 import playlists from 'schemas/playlists'
 
-export default new Model('spotify', playlists)
+export default model('playlists', playlists)

@@ -1,4 +1,4 @@
-import { Model } from 'mongoose'
+import { model } from 'mongoose'
 import playlist_bundles from 'schemas/playlistBundles'
 
-export default new Model('spotify', playlist_bundles)
+export default model('playlistBundles', playlist_bundles)

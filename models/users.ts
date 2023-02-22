@@ -1,4 +1,4 @@
-import { Model } from 'mongoose'
+import { model } from 'mongoose'
 import users from 'schemas/users'
 
-export default new Model('spotify', users)
+export default model('users', users)
