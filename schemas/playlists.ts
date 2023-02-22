@@ -1,9 +1,9 @@
 import { Schema, SchemaTypes } from 'mongoose'
 
 export default new Schema({
-  title: SchemaTypes.String,
-  userId: SchemaTypes.ObjectId,
+  title: { type: SchemaTypes.String, required: true },
+  userId: { type: SchemaTypes.ObjectId, required: true },
   description: SchemaTypes.String,
-  musicsIds: SchemaTypes.Array,
-  playlistImageUrl: SchemaTypes.String,
+  musicsIds: { type: SchemaTypes.Array, required: true },
+  playlistImageUrl: { type: SchemaTypes.String, required: true },
 })

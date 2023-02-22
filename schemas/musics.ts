@@ -1,13 +1,13 @@
 import { Schema, SchemaTypes } from 'mongoose'
 
 export default new Schema({
-  albumId: SchemaTypes.ObjectId,
-  title: SchemaTypes.String,
-  lyrics: SchemaTypes.String,
-  audioUrl: SchemaTypes.String,
+  albumId: { type: SchemaTypes.ObjectId, required: true },
+  title: { type: SchemaTypes.String, required: true },
+  lyrics: { type: SchemaTypes.String, required: true },
+  audioUrl: { type: SchemaTypes.String, required: true },
   shortsUrl: SchemaTypes.String,
-  playerBackgroundColor: SchemaTypes.String,
-  lyricsBackgroundColor: SchemaTypes.String,
-  primaryGenreId: SchemaTypes.ObjectId,
-  secondaryGenreId: SchemaTypes.ObjectId,
+  playerBackgroundColor: { type: SchemaTypes.String, required: true },
+  lyricsBackgroundColor: { type: SchemaTypes.String, required: true },
+  primaryGenreId: { type: SchemaTypes.ObjectId, required: true },
+  secondaryGenreId: { type: SchemaTypes.ObjectId, required: true },
 })

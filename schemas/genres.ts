@@ -1,6 +1,6 @@
 import { Schema, SchemaTypes } from 'mongoose'
 
 export default new Schema({
-  type: SchemaTypes.String,
-  name: SchemaTypes.String,
+  type: { type: SchemaTypes.String, required: true },
+  name: { type: SchemaTypes.String, required: true },
 })

@@ -1,6 +1,5 @@
 import { Schema, SchemaTypes } from 'mongoose'
 
 export default new Schema({
-  title: SchemaTypes.String,
-  playlistIds: SchemaTypes.Array,
+  playlistBundlesId: { type: SchemaTypes.ObjectId, required: true },
 })
