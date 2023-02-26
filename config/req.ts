@@ -1,3 +1,4 @@
+import { IError } from 'interfaces/error/dto'
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios'
 
 const instance = axios.create({
@@ -18,14 +19,11 @@ instance.interceptors.response.use(
   },
   function (error: any) {
     const { method, url } = error.config as AxiosRequestConfig
-    const { status, data } = error.response as AxiosResponse
+    const { status, data } = error.response as AxiosResponse<IError>
 
     if (error.response) {
-      if (!('errorCode' in data)) {
-        console.log('define the error that just occured')
-        return Promise.reject(error)
-      }
       const { errorCode, errorMessage } = data
+
       // TODO: dev 모드에서만 출력
       console.log(`❤️‍🔥 ${method?.toUpperCase()} ${url}\n🔴 ${status}\n${errorMessage ?? ''}`)
 
