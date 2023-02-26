@@ -1,4 +1,4 @@
-import { model } from 'mongoose'
+import { model, models } from 'mongoose'
 import users from 'schemas/users'
 
-export default model('users', users)
+export default models['users'] || model('users', users)

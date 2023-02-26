@@ -1,4 +1,4 @@
-import { model } from 'mongoose'
+import { model, models } from 'mongoose'
 import playlists from 'schemas/playlists'
 
-export default model('playlists', playlists)
+export default models['playlists'] || model('playlists', playlists)

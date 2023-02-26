@@ -1,4 +1,4 @@
-import { model } from 'mongoose'
+import { model, models } from 'mongoose'
 import genres from 'schemas/genres'
 
-export default model('genres', genres)
+export default models['genres'] || model('genres', genres)

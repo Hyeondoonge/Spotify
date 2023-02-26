@@ -1,4 +1,4 @@
-import { model } from 'mongoose'
+import { model, models } from 'mongoose'
 import albums from 'schemas/albums'
 
-export default model('albums', albums)
+export default models['albums'] || model('albums', albums)
