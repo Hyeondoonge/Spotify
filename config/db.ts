@@ -1,6 +1,5 @@
 import mongoose from 'mongoose'
 
-// // instance or error
 export default function connectDB() {
   if (mongoose.connections[0].readyState) {
     console.log('found connection')
@@ -15,8 +14,6 @@ export default function connectDB() {
     })
     .then((instance) => {
       console.log('successfully connect with 🧑🏻‍🎤spotify db ')
-
       return instance
     })
-    .catch((error) => console.error(error))
 }
